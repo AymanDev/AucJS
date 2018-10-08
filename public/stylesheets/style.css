@@ -1,0 +1,64 @@
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+a {
+    color: #00B7FF;
+}
+
+ul {
+    text-align: center;
+    width: 90%;
+    position: absolute;
+}
+
+.auc {
+    float: top;
+    top: 150px;
+    text-align: center;
+    width: 90%;
+    position: absolute;
+}
+
+li {
+    position: relative;
+    text-align: center;
+    display: inline;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.selected {
+    background: rgba(39, 169, 255, 0.26);
+    border-color: rgba(17, 89, 126, 0.88)
+}
+
+table {
+    position: absolute;
+    width: 98.5%;
+    float: top;
+    top: 200px;
+    background: rgba(17, 89, 126, 0.14);
+    padding: 5px;
+}
+
+table th {
+    background: rgba(17, 89, 126, 0.15);
+    font-weight: normal;
+    height: 40px;
+}
+
+#image-column {
+    width: 250px;
+}
+
+.colored {
+    background: rgba(17, 89, 126, 0.3);
+}
+
+.table-header {
+    font-weight: bold;
+}

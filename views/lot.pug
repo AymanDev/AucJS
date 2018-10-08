@@ -1,0 +1,30 @@
+extends layout
+
+block content
+
+    head
+        script(src='/javascripts/lot-client.js')
+
+    h1 AucJS
+    h3 Welcome to Neko Loli Traps Auction with surprises
+    br
+    h3 Name:
+    p #{lotName}
+
+    h3 Image:
+    img(src=lotParams.image)
+
+    h3 Description:
+    p #{lotParams.description}
+
+    h3 Start price/Current price
+    p #{lotParams.startPrice}/#{lotParams.currentPrice}
+
+    h3 Your lot:
+    input(id='priceBox', type='number', value=lotParams.currentPrice)
+    br
+
+    input(id='submit-button', type='button', onclick="hrefToLotSubmit(' + lotName + ');" value='Submit')
+    br
+    a(href='/') Back
+

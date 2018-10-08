@@ -1,0 +1,34 @@
+extends layout
+
+block content
+    h1 AucJS
+    p Welcome to Neko Loli Traps Auction with surprises
+    ul
+        li(class='selected') Auction
+        li
+            a(href='/lot-creator') Lot Creator
+
+    table
+        tr(class='colored')
+            th(class='table-header') Name
+            th(id='image-column', class='table-header') Image
+            th(class='table-header') Description
+            th(class='table-header') Start price
+            th(class='table-header') Current price
+            th(class='table-header') Make lot
+        mixin lotRow(lot)
+            tr
+                th=lot.name
+                th
+                    img(src=lot.image, style="height:125px; padding-top: 2px")
+                th=lot.description
+                th=lot.startPrice
+                th=lot.currentPrice
+                th
+                    a(href='/lot?lotName=' + lot.name ) Make Lot
+                    if lot.canBuy
+                        br
+                        a(href='') Buy
+        for lot in lots
+            +lotRow(lot)
+

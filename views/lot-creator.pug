@@ -1,0 +1,29 @@
+extends layout
+
+block content
+
+    head
+        script(src='/javascripts/lot-creator-client.js')
+
+    h1 AucJS
+    h3 Welcome to Neko Loli Traps Auction with surprises
+
+    h1 Lot Creator
+    |
+    |
+    strong Name:
+    input(id='name-field', type='text', value='Name')
+    br
+    strong Description:
+    input(id='desc-field', type='text', value='Description')
+    br
+    strong Start Price:
+    input(id='price-field', type='number', value='1000')
+    br
+    strong Image:
+    input(id='image-field', type='text', value='none')
+    br
+
+    input(id='submit-button', type='button', value='Submit')
+    br
+    a(href='/') Back
